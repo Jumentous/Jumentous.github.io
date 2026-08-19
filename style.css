@@ -330,3 +330,19 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
   .game-card { padding: 1.5rem; }
   .button { width: 100%; }
 }
+
+.game-tagline {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--fg);
+  margin: 0 0 1.25rem;
+}
+.game-quote {
+  margin: 1.5rem 0 0;
+  padding: 1rem 1.25rem;
+  border-left: 2px solid var(--ember);
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-style: italic;
+}
