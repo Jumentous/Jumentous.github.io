@@ -301,6 +301,41 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
 }
 .feature-title { color: var(--fg); font-weight: 600; }
 
+/* Screenshot strip — horizontally scrollable row of portrait phone
+   captures inside the Umbral card; snap per shot, no scrollbar chrome
+   theming beyond a thin accent track. */
+.screenshot-strip {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding-bottom: 0.75rem;
+  scrollbar-color: var(--accent-deep) var(--bg-raised);
+  scrollbar-width: thin;
+}
+.screenshot {
+  margin: 0;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+.screenshot img {
+  height: 380px;
+  width: auto;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: var(--bg);
+}
+.screenshot figcaption {
+  margin-top: 0.5rem;
+  font-family: var(--display);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+}
+
 /* Footer */
 .site-footer {
   max-width: var(--max);
@@ -329,6 +364,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
   main { padding: 0 1rem; }
   .game-card { padding: 1.5rem; }
   .button { width: 100%; }
+  .screenshot img { height: 300px; }
 }
 
 .game-tagline {
