@@ -382,3 +382,8 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
   font-size: 0.95rem;
   font-style: italic;
 }
+
+/* PixelPicked badge: sits in the game-actions row beside the store button;
+   the badge PNG carries its own frame, so just size and align it. */
+.pixelpicked-badge { display: inline-flex; align-items: center; line-height: 0; }
+.pixelpicked-badge img { display: block; max-width: 100%; height: auto; border-radius: 8px; }
