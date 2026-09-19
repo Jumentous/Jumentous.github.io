@@ -13,6 +13,7 @@
   --accent: #40e0ff;
   --accent-deep: #1a9cb4;
   --ember: #e6965a;
+  --brass: #e0aa48;
   --rule: rgba(64, 224, 255, 0.14);
   --max: 1080px;
   --display: "Orbitron", "Eurostile", "Bank Gothic", system-ui, sans-serif;
@@ -268,6 +269,20 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
 .game-card--fantasy::before,
 .game-card--fantasy::after { border-color: var(--ember); }
 .feature-list.feature-list--ember li::before { background: var(--ember); }
+/* Lay the Line: brass accent from the game's own palette */
+.game-card--rail::before,
+.game-card--rail::after { border-color: var(--brass); }
+.game-tag.game-tag--rail { color: var(--brass); }
+.feature-list.feature-list--rail li::before { background: var(--brass); }
+.game-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 1.25rem;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  image-rendering: pixelated;
+}
 .game-tag {
   color: var(--ember);
   font-family: var(--display);
