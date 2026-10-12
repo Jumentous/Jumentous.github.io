@@ -28,9 +28,8 @@
 .press-media { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; margin: 1.25rem 0; }
 .press-media figure { margin: 0; min-width: 0; }
 .press-media img, .press-media video { width: 100%; height: auto; display: block; border: 1px solid var(--rule); border-radius: 10px; background: var(--bg); }
+.press-media figcaption a { color: var(--accent); }
 .press-media figcaption { margin-top: 0.4rem; font-size: 0.82rem; color: var(--muted); }
-.trailer { max-width: 360px; }
-.trailer video { width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 12px; display: block; background: var(--bg); }
 .downloads { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: 0.5rem; }
 .downloads li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; padding: 0.7rem 1rem; background: var(--bg-panel); border: 1px solid var(--rule); border-radius: 8px; }
 .downloads a { color: var(--accent); font-weight: 600; }
@@ -125,11 +124,20 @@
   </section>
 
   <section id="media" class="press-section">
-    <h2>Trailer</h2>
-    <div class="trailer">
-      <video controls preload="metadata" playsinline poster="media/trailer_poster.jpg" width="1080" height="1920">
-        <source src="media/umbral_trailer_30s.mp4" type="video/mp4">
-      </video>
+    <h2>Trailers</h2>
+    <div class="press-media">
+      <figure>
+        <video controls preload="none" playsinline poster="media/launch_trailer_poster.jpg" width="1080" height="2404">
+          <source src="media/umbral_launch_trailer_vertical.mp4" type="video/mp4">
+        </video>
+        <figcaption>Launch trailer, 34s (<a href="https://youtube.com/shorts/GBGlV24xF-A" target="_blank" rel="noopener">YouTube</a>)</figcaption>
+      </figure>
+      <figure>
+        <video controls preload="metadata" playsinline poster="media/trailer_poster.jpg" width="1080" height="1920">
+          <source src="media/umbral_trailer_30s.mp4" type="video/mp4">
+        </video>
+        <figcaption>Gameplay trailer (29s)</figcaption>
+      </figure>
     </div>
 
     <h2 style="margin-top:2.5rem">In motion</h2>
@@ -171,7 +179,9 @@
 
     <h2 style="margin-top:2.5rem">Downloads</h2>
     <ul class="downloads">
-      <li><a href="media/umbral_trailer_30s.mp4" download>Trailer</a><span>MP4, 1080×1920, 29s</span></li>
+      <li><a href="media/umbral_launch_trailer_vertical.mp4" download>Launch trailer, vertical</a><span>MP4, 1080×2404, 34s, 9.4 MB</span></li>
+      <li><a href="media/umbral_launch_trailer_landscape.mp4" download>Launch trailer, landscape</a><span>MP4, 1920×1080, 34s, 6.5 MB</span></li>
+      <li><a href="media/umbral_trailer_30s.mp4" download>Gameplay trailer</a><span>MP4, 1080×1920, 29s</span></li>
       <li><a href="media/umbral_idle_screenshots_1080x1920.zip" download>All screenshots</a><span>ZIP of 9 PNGs, 1080×1920, 5.6 MB</span></li>
       <li><a href="media/collapse_cinematic.mp4" download>Collapse clip</a><span>MP4 with sound, 11s, 2.0 MB</span></li>
       <li><a href="media/big_crunch_cinematic.mp4" download>Big Crunch clip</a><span>MP4 with sound, 11s, 1.7 MB</span></li>
